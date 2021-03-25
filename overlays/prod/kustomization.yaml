@@ -1,0 +1,13 @@
+bases:
+  - ../../base
+
+namePrefix: prod-
+
+commonLabels:
+  env: prod
+
+commonAnnotations:
+  machine-class: super-fast
+
+patches:
+  - replica-count.yaml
