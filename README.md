@@ -47,3 +47,19 @@ patches:
       spec:
         replicas: 5
 ```
+
+Or in seperate file
+```
+patches:
+  - path: replica-patch.yaml
+    target:
+      kind: Deployment
+      name: nginx-deployment
+```
+
+replica-patch.yaml
+```
+- op: replace
+  path: /spec/replicas
+  value: 5
+```
