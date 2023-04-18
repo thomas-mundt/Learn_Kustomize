@@ -63,3 +63,19 @@ replica-patch.yaml
   path: /spec/replicas
   value: 5
 ```
+
+Or
+```
+patches:
+  - replica-patch.yaml
+```
+
+replica-patch.yaml
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  replicas: 5
+```
